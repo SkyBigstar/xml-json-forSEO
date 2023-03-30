@@ -34,7 +34,7 @@ let cnt_phases = 0;
 // Loop through each row of data
 for (let i = 0; i < data.length; i++) {
     const rowData = data[i];
-    if(!rowData.length) continue;
+    if(!rowData[0]) continue;
     // When meet the first line for Phase paragraph
     if (rowData[0].startsWith("Phase")) {
         const _data : Phase = { title: rowData[0], results: [] }
@@ -78,4 +78,4 @@ for (let i = 0; i < data.length; i++) {
     ret_data.phases[cnt_phases - 1].results.push(_result);
 }
 
-console.log(ret_data);
+console.log(JSON.stringify(ret_data));
