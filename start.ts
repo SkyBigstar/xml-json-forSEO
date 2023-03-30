@@ -4,6 +4,19 @@ const workbook: XLSX.WorkBook = XLSX.readFile('data/1.xlsx');
 
 const worksheet_roadmap: XLSX.WorkSheet = workbook.Sheets[workbook.SheetNames[0]];
 
+// import * as ExcelJS from 'exceljs';
+
+// const _workbook = new ExcelJS.Workbook();
+// const myfunc = async () => {
+//     await _workbook.xlsx.readFile('data/1.xlsx');
+//     const worksheet = _workbook.getWorksheet(workbook.SheetNames[0]);
+//     const cell = worksheet.getCell('A17');
+    
+//     const style = cell.style;
+//     console.log(style);
+// }
+// myfunc();
+
 const data: any[] = XLSX.utils.sheet_to_json(worksheet_roadmap, { header: 1 });
 
 interface Result {
