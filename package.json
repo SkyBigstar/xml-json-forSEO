@@ -1,0 +1,17 @@
+{
+  "name": "ts_xlsx_seo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc start.ts",
+    "start": "node start.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.0.2",
+    "xlsx": "^0.18.5"
+  }
+}
